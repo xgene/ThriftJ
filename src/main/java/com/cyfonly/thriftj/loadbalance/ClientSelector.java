@@ -5,15 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import javassist.util.proxy.MethodFilter;
-import javassist.util.proxy.MethodHandler;
-import javassist.util.proxy.Proxy;
-import javassist.util.proxy.ProxyFactory;
-
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.pool2.impl.GenericKeyedObjectPoolConfig;
 import org.apache.thrift.TServiceClient;
-import org.apache.thrift.protocol.TBinaryProtocol;
+import org.apache.thrift.protocol.TCompactProtocol;
 import org.apache.thrift.protocol.TProtocol;
 import org.apache.thrift.transport.TTransport;
 import org.apache.thrift.transport.TTransportException;
@@ -30,6 +25,11 @@ import com.cyfonly.thriftj.pool.ThriftServer;
 import com.cyfonly.thriftj.utils.MurmurHash3;
 import com.cyfonly.thriftj.utils.ThriftClientUtil;
 import com.google.common.base.Charsets;
+
+import javassist.util.proxy.MethodFilter;
+import javassist.util.proxy.MethodHandler;
+import javassist.util.proxy.Proxy;
+import javassist.util.proxy.ProxyFactory;
 
 
 /**
@@ -130,7 +130,7 @@ public class ClientSelector {
             }
             throw e;
         }
-        TProtocol protocol = new TBinaryProtocol(transport);
+        TProtocol protocol = new TCompactProtocol(transport);
 
         ProxyFactory factory = new ProxyFactory();
         factory.setSuperclass(ifaceClass);
