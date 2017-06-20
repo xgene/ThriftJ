@@ -5,7 +5,7 @@
   <version>1.0.1</version>
   
   <properties>
-  	<thrift.version>0.6.1</thrift.version>
+  	<thrift.version>0.10.0</thrift.version>
   	<guava.version>20.0</guava.version>
   	<commons.pool2.version>2.4.2</commons.pool2.version>
   	<javassist.version>3.18.0-GA</javassist.version>
@@ -78,6 +78,11 @@
     	<artifactId>slf4j-log4j12</artifactId>
     	<version>1.7.22</version>
     	<scope>test</scope>
+	</dependency>
+	<dependency>
+	    <groupId>commons-lang</groupId>
+	    <artifactId>commons-lang</artifactId>
+	    <version>2.6</version>
 	</dependency>
   </dependencies>
   

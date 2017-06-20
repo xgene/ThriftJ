@@ -1,3 +1,5 @@
+做出少许改变，适合自己使用
+
 ![design](https://github.com/cyfonly/ThriftJ/blob/master/pictures/ThriftJ.png "ThriftJ")  
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/cyfonly/ThriftJ/blob/master/LICENSE)  [![Built with Maven](http://maven.apache.org/images/logos/maven-feather.png)](http://search.maven.org/#search%7Cga%7C1%7Ccyfonly)  
 负载均衡和高可用的池化 Thrift Client  
